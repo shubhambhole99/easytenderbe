@@ -24,7 +24,7 @@ router.get('/admin/users', isAuthenticated, authorizeRoles('admin'), UserControl
 
 router.get('/admin/users/:id', isAuthenticated, authorizeRoles('admin'), UserController.getDetails)
 
-router.put('/admin/user/update/:id', isAuthenticated, authorizeRoles('admin'), UserController.updateUser)
+router.put('/admin/user/update/:id', isAuthenticated, UserController.updateUser)
 
 router.delete('/admin/user/delete/:id', isAuthenticated, authorizeRoles('admin'), UserController.deleteUser)
 

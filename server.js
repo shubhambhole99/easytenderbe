@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
     })
 })
 
+
 // 
 
 app.use('/api/user/', require('./routes/userRoutes'))

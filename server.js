@@ -19,11 +19,11 @@ app.get('/', (req, res) => {
 
 // 
 
-app.use('/api', require('./routes/userRoutes'))
-app.use('/api', require('./routes/tenderRoutes'))
-app.use('/api', require('./controllers/usertenderController'))
-app.use('/api', require('./routes/documentRoutes'))
-app.use('/api', require('./controllers/GraphController'))
+app.use('/api/user/', require('./routes/userRoutes'))
+app.use('/api/tender/', require('./routes/tenderRoutes'))
+app.use('/api/usertender/', require('./controllers/usertenderController'))
+app.use('/api/document/', require('./routes/documentRoutes'))
+app.use('/api/graph/', require('./controllers/GraphController'))
 // schemaName.index({ request: 'text' });  
 const PORT = process.env.PORT || 6000
 app.listen(PORT, () => {

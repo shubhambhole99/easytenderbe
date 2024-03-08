@@ -25,6 +25,7 @@ app.use('/api', require('./routes/tenderRoutes'))
 app.use('/api', require('./controllers/usertenderController'))
 app.use('/api', require('./routes/documentRoutes'))
 app.use('/api', require('./controllers/GraphController'))
+app.use('/api', require('./controllers/bankContrroller'))
 // schemaName.index({ request: 'text' });  
 const PORT = process.env.PORT || 6000
 app.listen(PORT, () => {

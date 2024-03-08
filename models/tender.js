@@ -29,7 +29,7 @@ const tenderSchema = new mongoose.Schema({
         required: true,
     },
     tender_value: {
-        type: Number,
+        type: String,
         default: 0
     },
     gross_area:{

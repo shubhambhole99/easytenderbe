@@ -14,7 +14,7 @@ const s3 = new AWS.S3({
 const upload = multer({
     storage: multerS3({
         s3: s3,
-        bucket: 'dcpr',
+        bucket: 'bhole.co-prod-data',
         acl: 'public-read',
         metadata: function (req, file, cb) {
             cb(null, { fieldName: file.fieldname });
@@ -68,7 +68,7 @@ exports.getAllDocuments = async (req, res) => {
 exports.getAllFolders = async (req, res) => {
     try {
         const params = {
-            Bucket: 'dcpr',
+            Bucket: 'bhole.co-prod-data',
             Delimiter: '/'
         };
 
@@ -137,7 +137,7 @@ exports.getFolderContents = async (req, res) => {
 
     try {
         const data = await s3.listObjects({
-            Bucket: 'dcpr',
+            Bucket: 'bhole.co-prod-data',
             Prefix: `${folderName}/`
         }).promise();
 
